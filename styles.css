@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+/* Settings variables to use */
+:root {
+  --color-primary-900: hsl(158, 36%, 37%);
+  --color-primary-100: hsl(30, 38%, 92%);
+
+  --color-secondary-900: hsl(212, 21%, 14%);
+  --color-secondary-400: hsl(228, 12%, 48%);
+  --color-secondary-100: hsl(0, 0%, 100%);
+
+  --font-headings: "Fraunces", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+/* General reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 1em;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+/* General reset */
+
+/* Base styles */
+body {
+  background-color: var(--color-primary-100);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: min(90%, 60rem + 1vw);
+  border-radius: 1rem;
+  background-color: var(--color-secondary-100);
+}
+
+.card__img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 2.4rem;
+}
+
+.card__title {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  font-family: var(--font-headings);
+  font-weight: 700;
+  color: var(--color-secondary-900);
+  margin-bottom: 1.6rem;
+}
+
+.card__category,
+.card__description {
+  color: var(--color-secondary-400);
+  font-weight: 500;
+  font-family: var(--font-body);
+}
+
+.card__category {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.card__description {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  margin-bottom: 2.4rem;
+}
+
+.card__price {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.9rem;
+  align-items: center;
+}
+
+.card__price--discount {
+  font-family: var(--font-headings);
+  color: var(--color-primary-900);
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+}
+
+.card__price--original {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-secondary-400);
+}
+
+.add-to-cart {
+  width: 100%;
+  border: none;
+  padding: 1.5rem 9rem;
+  background-color: var(--color-primary-900);
+  color: var(--color-secondary-100);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-family: var(--font-body);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 37.5em) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card__content {
+    padding: 3.2rem;
+  }
+
+  .card__img {
+    max-width: 49%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .add-to-cart {
+    padding: 1.5rem 5rem;
+  }
+
+  .card__category {
+    margin-bottom: 2rem;
+  }
+
+  .card__title {
+    margin-bottom: 2.4rem;
+  }
+
+  .card__description {
+    margin-bottom: 3rem;
+  }
+
+  .card__price {
+    margin-bottom: 3.5rem;
+  }
+}
