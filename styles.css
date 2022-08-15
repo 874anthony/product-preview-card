@@ -3,6 +3,7 @@
 /* Settings variables to use */
 :root {
   --color-primary-900: hsl(158, 36%, 37%);
+  --color-primary-900-darker: hsl(157, 43%, 18%);
   --color-primary-100: hsl(30, 38%, 92%);
 
   --color-secondary-900: hsl(212, 21%, 14%);
@@ -135,6 +136,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: var(--color-primary-900-darker);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card:focus-within {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 37.5em) {
